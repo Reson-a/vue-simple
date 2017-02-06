@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Vue简单实现</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>count:{{count.a}}</p>
+    <button id="btn">点我增加计数</button>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+  var vm = new Vue ({
+    el:'#app',
+    data: {
+      count:{
+        a:0
+      }   
+    }
+  })
+  var btn =document.getElementById('btn')
+  btn.addEventListener('click',()=>{
+    vm.$data.count.a++
+  })
+  </script>
+</body>
+
+</html>
