@@ -7,7 +7,7 @@
 
 <body>
   <div id="app">
-    <p>count:{{count.a}}</p>
+    <p>count:{{count}}</p>
     <button id="btn">点我增加计数</button>
   </div>
   <script src="vue.js"></script>
@@ -15,14 +15,18 @@
   var vm = new Vue ({
     el:'#app',
     data: {
-      count:{
-        a:0
-      }   
+      count:0
+    },
+    watch: {
+      count: function(){
+        console.log('观察到数据变动')
+      }
     }
   })
   var btn =document.getElementById('btn')
-  btn.addEventListener('click',()=>{
-    vm.$data.count.a++
+  btn.addEventListener('click',function(){
+    vm.count++
+    console.log('vm.count='+ vm.count)
   })
   </script>
 </body>
