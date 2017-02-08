@@ -1,5 +1,7 @@
 # vue的简单实现
 
+[demo地址](https://reson-a.github.io/vue-simple/)
+
 vue.js的一个简单实现，支持 Mustache语法的数据绑定和watch
 
 核心的Observer和Watcher部分参考了vue.js源码，其余部分参照mvvm原理自己进行了实现，没有用到render函数和虚拟dom，与源码会有一定出入
